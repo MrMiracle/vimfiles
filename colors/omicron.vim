@@ -1,13 +1,12 @@
-  
-" Vim color file
+" Omicron Colorscheme configuration
 "
 " Author: Francisco Garcia <franciscojgarcia11@gmail.com>
 "
 " Note: Based on the molokai theme by Tomas Restrepo
 " which is in turn based on the Monokai themefor textmate
-" by Wimer Hazenberg and its darker variant 
-" by Hamish Stuart Macpherson
-"
+" by Wimer Hazenberg and its darker variant by Hamish Stuart Macpherson
+" Also influenced in some parts by snippets of Tim Pope's colorscheme work
+" (including VividChalk)
 
 hi clear
 
@@ -35,8 +34,10 @@ hi Number          guifg=#AE81FF
 hi String          guifg=#CC9D76
 hi Conditional     guifg=#F92672               gui=bold
 hi Constant        guifg=#AE81FF               gui=bold
-hi Cursor          guifg=#000000 guibg=#F8F8F0
-hi iCursor          guifg=#000000 guibg=#F8F8F0
+"hi Cursor          guifg=#000000 guibg=#F8F8F0
+hi Cursor          guifg=#d4d4d4 guibg=#871621
+"hi iCursor          guifg=#000000 guibg=#F8F8F0
+"hi Cursor          guifg=#d4d4d4 guibg=#871621
 hi Debug           guifg=#BCA3A3               gui=bold
 hi Define          guifg=#66D9EF
 hi Delimiter       guifg=#8F8F8F
