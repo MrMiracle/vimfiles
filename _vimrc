@@ -7,17 +7,37 @@ set number
 set laststatus=2
 
 set background=dark
-"colorscheme molokai 
-colorscheme omicron
-let g:airline_theme='luna'
 
-"Indent Guide
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level=1
-let g:indent_guides_guide_size=1
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=gray16 ctermbg=darkgrey
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  guibg=gray20 ctermbg=lightgrey
+if has('gui_running')
+	set guifont=Monaco:h9:cANSI
+	colorscheme omicron
+	let g:airline_theme='luna'
+
+	"Set Git Gutter Highlight rules
+	highlight GitGutterAdd guifg=#E4E4E4 guibg=#328742
+	highlight GitGutterChange guifg=#4843A8 guibg=#A3A843
+	highlight GitGutterDelete guifg=#E4E4E4 guibg=#8C2D36
+	highlight GitGutterChangeDelete guifg=#8C2D36 guibg=#A3A843
+
+	"Gui Options
+	set guioptions-=m
+	set guioptions-=T
+	set guioptions-=L
+	set guioptions-=r
+
+	"Indent Guide
+	let g:indent_guides_enable_on_vim_startup = 1
+	let g:indent_guides_start_level=1
+	let g:indent_guides_guide_size=1
+	let g:indent_guides_auto_colors = 0
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=gray16 ctermbg=darkgrey
+	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  guibg=gray20 ctermbg=lightgrey
+endif
+
+if !has('gui_running')
+	"colorscheme vividchalk
+	colorscheme omicron
+endif
 
 "GitGutter Settings
 let g:gitgutter_sign_column_always=1
@@ -27,6 +47,7 @@ let g:gitgutter_eager = 0
 let g:indentLine_color_term = 239
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
+
 inoremap jj <ESC>
 nnoremap ; :
 autocmd vimenter * RainbowParenthesesToggle
@@ -104,15 +125,3 @@ nmap <F8> :TagbarToggle<CR>
 "set listchars=tab:»\ ,eol:¬
 map <F2> <ESC>:NERDTreeToggle<ENTER>
 
-if has('gui_running')
-	set guifont=Monaco:h9:cANSI
-	"Set Git Gutter Highlight rules
-	highlight GitGutterAdd guifg=#E4E4E4 guibg=#328742
-	highlight GitGutterChange guifg=#4843A8 guibg=#A3A843
-	highlight GitGutterDelete guifg=#E4E4E4 guibg=#8C2D36
-	highlight GitGutterChangeDelete guifg=#8C2D36 guibg=#A3A843
-endif
-if !has('gui_running')
-	"colorscheme vividchalk
-	colorscheme omicron
-endif
