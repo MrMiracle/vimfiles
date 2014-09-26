@@ -8,6 +8,15 @@ set laststatus=2
 
 set background=dark
 
+"Folding code options
+"set foldmethod=manual
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 if has('gui_running')
 	set guifont=Monaco:h9:cANSI
 	colorscheme omicron
