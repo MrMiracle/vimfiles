@@ -115,9 +115,9 @@ function MyDiff()
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 set backup
-set backupdir=C:\Scrap\VIMSWAP
-set backupskip=C:\Scrap\VIMSWAP\*
-set directory=C:\Scrap\VIMSWAP
+set backupdir=.,$TEMP
+set backupskip=.,$TEMP
+set directory=.,$TEMP
 set writebackup
 
 nmap <Leader>l :set list!<CR>
