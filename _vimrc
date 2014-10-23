@@ -8,6 +8,11 @@ set laststatus=2
 
 set background=dark
 
+"Airline options
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 "Folding code options
 "set foldmethod=manual
 inoremap <F9> <C-O>za
