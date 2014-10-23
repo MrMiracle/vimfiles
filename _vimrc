@@ -38,6 +38,7 @@ if has('gui_running')
 	set guioptions-=T
 	set guioptions-=L
 	set guioptions-=r
+	set guioptions-=e
 
 	"Indent Guide
 	let g:indent_guides_enable_on_vim_startup = 1
