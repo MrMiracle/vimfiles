@@ -23,7 +23,8 @@ vnoremap <F9> zf
 "autocmd BufWinEnter *.* silent loadview
 
 if has('gui_running')
-	set guifont=Monaco:h9:cANSI
+	set guifont=M+_1mn_regular:h10:cANSI
+"	set guifont=Monaco:h9:cANSI
 	colorscheme omicron
 	let g:airline_theme='luna'
 
