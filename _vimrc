@@ -8,6 +8,15 @@ set laststatus=2
 
 set background=dark
 
+"split navigations and various customizations
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+
+set splitright
+set splitbelow
+
 "Airline options
 
 let g:airline#extensions#tabline#enabled = 1
