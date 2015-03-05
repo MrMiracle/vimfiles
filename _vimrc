@@ -17,6 +17,9 @@ nnoremap <C-h> <C-w>h
 set splitright
 set splitbelow
 
+"Display Extra whitespace characters
+set list listchars=tab:»·,trail:·,nbsp:·
+
 "Airline options
 
 let g:airline#extensions#tabline#enabled = 1
