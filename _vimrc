@@ -18,7 +18,7 @@ set splitright
 set splitbelow
 
 "Display Extra whitespace characters
-set list listchars=tab:»·,trail:·,nbsp:·
+"set list listchars=tab:»·,trail:·,nbsp:·
 
 "Airline options
 
