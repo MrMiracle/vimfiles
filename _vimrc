@@ -151,6 +151,8 @@ set backupskip=C:/Scrap/vimswap//,$TEMP
 set directory=C:/Scrap/vimswap//,$TEMP
 set writebackup
 
+set noundofile 
+
 nmap <Leader>l :set list!<CR>
 nmap <F8> :TagbarToggle<CR>
 "set listchars=tab:»\ ,eol:¬
